@@ -1,0 +1,13 @@
+{
+	"n_targets": 188753,
+	"n_bootstraps": 50,
+	"n_processed": 44434722,
+	"n_pseudoaligned": 12978955,
+	"n_unique": 4559298,
+	"p_pseudoaligned": 29.2,
+	"p_unique": 10.3,
+	"kallisto_version": "0.46.1",
+	"index_version": 10,
+	"start_time": "Wed Mar 10 12:52:33 2021",
+	"call": "./kallisto/kallisto quant -b 50 -i homo_sapiens/transcriptome.idx -o SRR1027171 -t 8 SRR1027171_1.fastq SRR1027171_2.fastq"
+}
