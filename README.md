@@ -17,6 +17,10 @@ Tutorial zur praktischen bioinformatischen Übung im Rahmen der Vorlesung "Mediz
 Um das Prinzip der bioinformatischen Auswertung von Hochdurchsatzsequenzierdateien verdeutlichen, soll exemplarisch das Ergebnis aus dieser Publikation (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3278922/) reproduziert werden.
 In dieser Studie geht es um einen Vergleich der Expression von Genen in verschiedenen Untergruppen von Brustkrebs: triple negative cancer (TNBC) vs non - TNBC. 
 
+# Vorraussetzung
+
+
+
 # Anleitung
 1.) Download und Installation von Software:
 
@@ -94,4 +98,34 @@ In das enstandene Verzeichnis die Ordner „TNBC“ und „metadata“ kopieren.
 
 Im Dateibrowser-Fenster von R-Studio In der Konsole von R Studio (unten rechts): Doppelklick auf "sleuth.R". Im "Source" Fenster (oben links) erscheint das Skript: Zeile für Zeile ausführen mit "Run". Wenn man dies zum ersten Mal macht, will R ganz viele Pakete installieren und/oder updaten, die gebraucht werden für das Funktionieren der Pakete, die wir unmittelbar brauchen.
 
-Wenn alles funktioniert hat, öffnet der letzte Befehl "sleuth_live(so)" ein interaktives Fenster, mit dem man verschiedene Analysen macht
+Wenn alles funktioniert hat, öffnet der letzte Befehl "sleuth_live(so)" ein interaktives Fenster, mit dem man verschiedene Analysen macht.
+
+# Links zu weiteren Infos
+
+1.) Informationen zu den Brustkrebs-Proben: 
+https://www.nature.com/articles/srep00264
+
+https://www.ncbi.nlm.nih.gov/sra?term=SRP032789
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52194
+
+
+2.) kallisto tutorial: 
+http://pachterlab.github.io/kallisto/starting
+
+3.) R 
+i) Installation: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd
+
+ii) kurze Einfühurng in R: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd#section-just-enough-r-to-be-dangerous
+
+4.) Differentielle Genexpression mit R-Paket "sleuth"
+
+i) Installation von sleuth: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd#section-installing-and-loading-sleuth
+ii) sleuth ausführen: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd#section-running-sleuth
+iii) Ausführliche Erklärung der interaktiven Analysemöglichkeiten von "sleuth" (siehe Punkt 4 in Anleitung): https://www.youtube.com/watch?v=KEn0CMYk6Wo
+
+5.) Das Konzept "liquid biopsy" erklärt von Bioinformatik-Studierenden der TH Bingen: https://www.youtube.com/watch?v=z-GnFq-8AdI
+
+6.) Was ein Bioinformatiker in der Medizin verloren hat: ScienceSlam-Vortrag von mir https://www.youtube.com/watch?v=bdysuKkAbCs
+
+
