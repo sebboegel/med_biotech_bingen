@@ -44,11 +44,14 @@ https://ftp.fau.de/cran/
 v) R - Studio: graphical user interfave für R
 https://rstudio.com/products/rstudio/download/#download
 
-2.) 
-3.SRA Datei mit der ID SRR1027172 herunterladen. Dahinter verbergen sich die primären Sequenzierdaten einer „Triple Negative Breast Cancer“ (ZNBC) Patientin (https://www.ncbi.nlm.nih.gov/sra/SRX374851[accn]). Das sind 1.6 GB, kann also dauern, je nach Internetverbindung:
+2.) Das "Sequence Read Archive" ist eines der größten Repositories für Sequenzierdatein. Diese kann man sich frei herunterladen und re-analysieren um evtl. neue Erkentnisse aus bereits vorhandenen Daten zu generieren. Auch die Brustkrebs-Sample der hier betrachteten Publikation sind hier zu finden (https://www.ncbi.nlm.nih.gov/sra?term=SRP032789).  Exemplatisch werden uns die Sequenzierdatei einer Patientin herunterladen und analysieren: die SRA Datei mit der ID SRR1027172. Dahinter verbergen sich die primären Sequenzierdaten einer „Triple Negative Breast Cancer“ (ZNBC) Patientin (https://www.ncbi.nlm.nih.gov/sra/SRX374851[accn]). Das sind 1.6 GB, kann also dauern, je nach Internetverbindung:
 
+Im Terminal/ Eingabeaufforderung eingeben:
+```
 [Pfad zum sratoolkit]/bin/prefetch SRR1027172
-
+```
+In meinem Terminal sieht das so aus:
+```
 sebastian@Sebastians-MBP ~ %  tools/sratoolkit.2.10.9-mac64/bin/prefetch SRR1027172    
 
 2021-03-16T07:46:47 prefetch.2.10.9: 1) Downloading 'SRR1027172'...
@@ -57,19 +60,28 @@ sebastian@Sebastians-MBP ~ %  tools/sratoolkit.2.10.9-mac64/bin/prefetch SRR1027
 2021-03-16T08:22:42 prefetch.2.10.9:  'SRR1027172' is valid
 2021-03-16T08:22:42 prefetch.2.10.9: 1) 'SRR1027172' was downloaded successfully
 2021-03-16T08:22:42 prefetch.2.10.9: 'SRR1027172' has 0 unresolved dependencies
+```
+Nun haben wir die Sequenzierdatei im sra-Format heruntergeladen. Da die nächsten Schritte aber eine fastq-Datei benötigen, müssen wir diese noch umwandeln. Das macht "fastq-dump". Da es sich hier um ein paired-end Experiment handelt, müssen wir dem Programm dies mitteilen (mit "--split-files"). Dann entstehen 2 fastq Dateien.
 
-
+Im Terminal/ Eingabeaufforderung eingeben:
+```
 [Pfad zum sratoolkit]/bin/fastq-dump --split-files /Users/sebastian/SRR1027172/SRR1027172.sra
-
+```
+In meinem Terminal sieht das so aus:
+```
 sebastian@Sebastians-MBP ~ % tools/sratoolkit.2.10.9-mac64/bin/fastq-dump --split-files /Users/sebastian/SRR1027172/SRR1027172.sra
 Rejected 22084318 READS because READLEN < 1
 Read 40493220 spots for /Users/sebastian/SRR1027172/SRR1027172.sra
 Written 40493220 spots for /Users/sebastian/SRR1027172/SRR1027172.sra
+```
+Die sra Datei kann nun gelöscht werden.
 
 3.) Berechnung der Genexpression mit kallisto
-
+```
 [Pfad zu kallisto]/kallisto quant -i [Pfad zum humanen Genom]/homo_sapiens/transcriptome.idx -o [Pfad zum gewünschten Speicherort]/SRR1027172 [Pfad zur fastq]/SRR1027172_1.fastq [Pfad zur fastq]/SRR1027172_2.fastq 
+```
 
+```
 sebastian@Sebastians-MBP ~ % tools/kallisto/kallisto quant -i tools/kallisto/homo_sapiens/transcriptome.idx -o SRR1027172 SRR1027172_1.fastq SRR1027172_2.fastq 
 
 [quant] fragment length distribution will be estimated from the data
@@ -85,6 +97,7 @@ sebastian@Sebastians-MBP ~ % tools/kallisto/kallisto quant -i tools/kallisto/hom
 [quant] estimated average fragment length: 170.209
 [   em] quantifying the abundances ... done
 [   em] the Expectation-Maximization algorithm ran for 1,165 rounds
+```
 
 4.) Differentielle Genexpression in R:
 
