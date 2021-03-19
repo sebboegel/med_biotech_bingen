@@ -8,7 +8,9 @@ Tutorial zur praktischen bioinformatischen Übung im Rahmen der Vorlesung "Mediz
 
 3.) Mit R eine differentielle Genexpression durchführen
 
-4.) Die Ergebnisse der differentiellen Genexpression anhand der biologischen Bedeutung interpretieren 
+4.) Die Ergebnisse der differentiellen Genexpression anhand der biologischen/medizinischen Bedeutung interpretieren
+
+5.) Take home message: die Analyse von Hochdurchsatz-Transkriptom Sequenzierung kann schnell und einfach auf dem Heim-Computer gemacht werden! Große Herausforderung ist die Interpretation der Daten!
 
 # Aufgabe
 
@@ -17,13 +19,18 @@ In dieser Studie geht es um einen Vergleich der Expression von Genen in verschie
 
 # Anleitung
 1.) Download und Installation von Software:
+
 i) Kallisto - Programm zum Abgleich der Sequenzfragmente (reads) mit dem Refenzgenom und Quantifizierung der Genexpression: http://pachterlab.github.io/kallisto/download
 
+
 ii) Humanes Genom installieren
+
 Auf https://github.com/pachterlab/kallisto-transcriptome-indices/releases die Datei „homo_sapiens.tar.gz“ herunterladen (Achtung: 1,8 GB Datei).
 Hinweis zum entdecken von „tar.gz“ Dateien unter Windows: https://praxistipps.chip.de/tar-gz-dateien-entpacken-so-gehts_36834
 
+
 iii) SRA-Toolkit - Programm zum Herunterladen von Sequenzierdaten aus der Sequenzdatenbank SRA
+
 https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit
 Anleitung für linux: http://www.metagenomics.wiki/tools/short-read/ncbi-sra-file-format/sra-tools-install
 
@@ -76,11 +83,15 @@ sebastian@Sebastians-MBP ~ % tools/kallisto/kallisto quant -i tools/kallisto/hom
 [   em] the Expectation-Maximization algorithm ran for 1,165 rounds
 
 4.) Differentielle Genexpression in R:
+
+Rstudio öffnen. 
+
 Datei -> Neues Projekt
+
 New Directory -> New Project -> Create
 
 In das enstandene Verzeichnis die Ordner „TNBC“ und „metadata“ kopieren.
 
-In der Console:
+Im Dateibrowser-Fenster von R-Studio In der Konsole von R Studio (unten rechts): Doppelklick auf "sleuth.R". Im "Source" Fenster (oben links) erscheint das Skript: Zeile für Zeile ausführen mit "Run". Wenn man dies zum ersten Mal macht, will R ganz viele Pakete installieren und/oder updaten, die gebraucht werden für das Funktionieren der Pakete, die wir unmittelbar brauchen.
 
-Skript ausführen: Zeile für Zeile mit "Run"
+Wenn alles funktioniert hat, öffnet der letzte Befehl "sleuth_live(so)" ein interaktives Fenster, mit dem man verschiedene Analysen macht
