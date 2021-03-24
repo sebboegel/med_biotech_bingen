@@ -141,4 +141,6 @@ iii) Ausführliche Erklärung der interaktiven Analysemöglichkeiten von "sleuth
 
 6.) Was ein Bioinformatiker in der Medizin verloren hat: ScienceSlam-Vortrag von mir https://www.youtube.com/watch?v=bdysuKkAbCs
 
+7.) Wundervolle Video Tutorials zu allen Aspeketen der Bioinformatik (Einführung in R, Genomics Analysis ....) des Canadian Bioinformatics Workshop. Videos: https://www.youtube.com/channel/UCKbkfKk65PZyRCzUwXOJung/featured, Material dazu: https://bioinformaticsdotca.github.io/
+
 
