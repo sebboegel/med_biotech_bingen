@@ -18,7 +18,7 @@ Um das Prinzip der bioinformatischen Auswertung von Hochdurchsatzsequenzierdatei
 In dieser Studie geht es um einen Vergleich der Expression von Genen in verschiedenen Untergruppen von Brustkrebs: triple negative cancer (TNBC) vs non - TNBC. 
 
 # Vorraussetzung
-Genug Speicherplatz (für die Schritte 1 - 3).
+Genug Speicherplatz (für die Schritte 1 - 3, ca. 15 GB!
 
 
 # Anleitung
