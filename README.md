@@ -35,7 +35,7 @@ Hinweis zum entdecken von „tar.gz“ Dateien unter Windows: https://praxistipp
 
 iii) SRA-Toolkit - Programm zum Herunterladen von Sequenzierdaten aus der Sequenzdatenbank SRA
 
-https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit
+https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
 Anleitung für linux: http://www.metagenomics.wiki/tools/short-read/ncbi-sra-file-format/sra-tools-install
 
 iv) R - Programmiersprache für statistische Berechnungen und Grafiken
