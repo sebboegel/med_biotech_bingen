@@ -2,7 +2,7 @@
 #1.) BiocManager v.3.12
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install(version = "3.12")
+BiocManager::install()
 #update all and Yes
 #2.) devtools
 install.packages("devtools")
