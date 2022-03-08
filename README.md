@@ -38,7 +38,7 @@ iii) SRA-Toolkit - Programm zum Herunterladen von Sequenzierdaten aus der Sequen
 https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
 Anleitung für linux: http://www.metagenomics.wiki/tools/short-read/ncbi-sra-file-format/sra-tools-install
 
-iv) R - Programmiersprache für statistische Berechnungen und Grafiken
+iv) R - Programmiersprache für statistische Berechnungen und Grafiken (aktuelle R Version Stand 8. März 2022: R 4.1.2)
 https://ftp.fau.de/cran/
 
 v) R - Studio: graphical user interfave für R
