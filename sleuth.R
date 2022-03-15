@@ -1,24 +1,30 @@
+####Beim erstmaligen Ausführen dieses Skripts, müssen folgende Zeilen einmalig ausgeführt werden. Bei jedem weiteren AUsführen des Skripts
+#####können die Punkte 1-5 auskommentiert (mit #) werden
 ##### Erstmal alle packages installieren, die wir brauchen:
-#1.) BiocManager v.3.12
+#1.) BiocManager v.3.14
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install()
+BiocManager::install(version = "3.14")
 #update all and Yes
 #2.) devtools
 install.packages("devtools")
 #3.) rhdf5
-BiocManager::install("rhdf5")
+BiocManager::install("rhdf5",force=TRUE)
+#update all
 #4.) das eigentlich package für die differentielle Genexpression: sleuth
-devtools::install_github("pachterlab/sleuth")
+###Da es einen Bug im Installtionsprogramm von sleuth gibt, habe ich folgendedn workaround befolgt: https://stackoverflow.com/questions/69975645/unable-to-install-package-sleuth-in-r
+devtools::install('./sleuth/')
+
 #update all and Yes
 #5.) biomart um die verschiedenen Gennamen-System zu verbinden (https://en.wikipedia.org/wiki/BioMart)
 BiocManager::install("biomaRt")
 #Yes
+#######Installation Ende
+
 
 ########Packete laden
 library(sleuth)
 library("biomaRt")
-
 ####### los geht es:
 #suche die Genexpressionsdateien für jedes sample (Patientin)
 sample_id <- dir(file.path("TNBC"))
