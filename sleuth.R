@@ -21,10 +21,10 @@ BiocManager::install("biomaRt")
 #Yes
 #######Installation Ende
 
-
 ########Packete laden
 library(sleuth)
 library("biomaRt")
+
 ####### los geht es:
 #suche die Genexpressionsdateien für jedes sample (Patientin)
 sample_id <- dir(file.path("TNBC"))
@@ -36,11 +36,18 @@ s2c <- dplyr::select(s2c, sample = run_accession, condition)
 s2c <- dplyr::mutate(s2c, path = kal_dirs)
 
 ##################################
+#Der folgende Befehl kommuniziert mit dem Webserver von ENSEMBL um für alle menschlcihen gene u.a. die Transkript-ID
+#mit dem dazugehörenden Gensymbol herunterzuladen. Dieser Schritt braucht etwas Zeit, deshalb habe ich dies schon
+#getan und in der Datei "biomart.RDS" gespeichert. Dieses Objekt können wir ganz einfach in Zeile 50 laden und benutzen.
 #lade die biomart Datenbank 
-mart <- biomaRt::useMart(biomart = "ENSEMBL_MART_ENSEMBL",
-                         dataset = "hsapiens_gene_ensembl",
-                         host = 'ensembl.org')
+#mart <- biomaRt::useMart(biomart = "ENSEMBL_MART_ENSEMBL",
+#                         dataset = "hsapiens_gene_ensembl",
+#                         host = 'ensembl.org')
+#saveRDS(mart,file="biomart.rds")
+###############
 #um den Transkript-Ids das dazugehörige Gensymbol zuzuordnen
+
+ttg=readRDS("biomart.rds")
 t2g <- biomaRt::getBM(attributes = c("ensembl_transcript_id", "ensembl_gene_id",
                                      "external_gene_name"), mart = mart)
 t2g <- dplyr::rename(t2g, target_id = ensembl_transcript_id,
