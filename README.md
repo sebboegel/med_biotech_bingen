@@ -18,7 +18,7 @@ Um das Prinzip der bioinformatischen Auswertung von Hochdurchsatzsequenzierdatei
 In dieser Studie geht es um einen Vergleich der Expression von Genen in verschiedenen Untergruppen von Brustkrebs: triple negative cancer (TNBC) vs non - TNBC. 
 
 # Vorraussetzung
-Genug Speicherplatz (für die Schritte 1 - 3, ca. 15 GB!
+Genug Speicherplatz für die Schritte 1 - 3, ca. 15 GB!
 
 
 # Anleitung
@@ -101,7 +101,7 @@ sebastian@Sebastians-MBP ~ % tools/kallisto/kallisto quant -i tools/kallisto/hom
 
 4.) Differentielle Genexpression in R:
 
-Verzeichnis mit bereits berechneten Genexpressionen (Schritte 1 -3 für alle Patientenproben) herunterladen: https://www.dropbox.com/s/8rad9pewph7rl09/med_biotech_bingen.zip?dl=0 (ca. 1,1 GB)
+Verzeichnis mit bereits berechneten Genexpressionen (Schritte 1 -3 für alle Patientenproben) herunterladen: https://1drv.ms/u/s!Ag871jY-2AMShwOXf-rmJ2l7Mlmf?e=EsxFyy (ca. 1,4 GB)
 
 Rstudio öffnen. 
 
