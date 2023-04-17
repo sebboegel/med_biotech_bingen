@@ -113,6 +113,8 @@ In das enstandene Verzeichnis die Ordner „TNBC“ und „metadata“ kopieren.
 
 Im Dateibrowser-Fenster von R-Studio In der Konsole von R Studio (unten rechts): Doppelklick auf "sleuth.R". Im "Source" Fenster (oben links) erscheint das Skript: Zeile für Zeile ausführen mit "Run". Wenn man dies zum ersten Mal macht, will R ganz viele Pakete installieren und/oder updaten, die gebraucht werden für das Funktionieren der Pakete, die wir unmittelbar brauchen.
 
+Update 17. April: Bitte vor dem Auführen in Zeile 7 die Version von bioconductor ändern: von "3.14" zu "3.16".
+
 Wenn alles funktioniert hat, öffnet der letzte Befehl "sleuth_live(so)" ein interaktives Fenster, mit dem man verschiedene Analysen macht.
 
 # Links zu weiteren Infos
