@@ -38,7 +38,7 @@ iii) SRA-Toolkit - Programm zum Herunterladen von Sequenzierdaten aus der Sequen
 https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
 Anleitung für linux: http://www.metagenomics.wiki/tools/short-read/ncbi-sra-file-format/sra-tools-install
 
-iv) R - Programmiersprache für statistische Berechnungen und Grafiken (aktuelle R Version Stand 17. April 2023: R 4.2.3)
+iv) R - Programmiersprache für statistische Berechnungen und Grafiken (aktuelle R Version Stand 25. April 2023: R 4.3)
 https://ftp.fau.de/cran/
 
 v) R - Studio: graphical user interfave für R
@@ -113,7 +113,7 @@ In das enstandene Verzeichnis die Ordner „TNBC“ und „metadata“ kopieren.
 
 Im Dateibrowser-Fenster von R-Studio In der Konsole von R Studio (unten rechts): Doppelklick auf "sleuth.R". Im "Source" Fenster (oben links) erscheint das Skript: Zeile für Zeile ausführen mit "Run". Wenn man dies zum ersten Mal macht, will R ganz viele Pakete installieren und/oder updaten, die gebraucht werden für das Funktionieren der Pakete, die wir unmittelbar brauchen.
 
-Update 17. April: Bitte vor dem Auführen in Zeile 7 die Version von bioconductor ändern: von "3.14" zu "3.16".
+Update 25. April: Bitte vor dem Auführen in Zeile 7 die Version von bioconductor ändern: von "3.14" zu "3.17" (bei R-Version 4.3.).
 
 Wenn alles funktioniert hat, öffnet der letzte Befehl "sleuth_live(so)" ein interaktives Fenster, mit dem man verschiedene Analysen macht.
 
