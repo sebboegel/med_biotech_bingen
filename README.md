@@ -138,6 +138,7 @@ i) Installation - A Step-by-Step Guide for Beginners: https://techvidvan.com/tut
 4.) Differentielle Genexpression mit R-Paket "sleuth"
 
 i) https://ycl6.gitbook.io/guide-to-rna-seq-analysis/differential-expression-analysis/dge-and-dte-analysis-of-salmon-inputs-using-sleuth
+
 ii) Ausführliche Erklärung der interaktiven Analysemöglichkeiten von "sleuth" (siehe Punkt 4 in Anleitung): 
 https://www.youtube.com/watch?v=KEn0CMYk6Wo
 https://www.youtube.com/watch?v=80IGNmrQLTg
