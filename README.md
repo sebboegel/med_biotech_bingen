@@ -130,16 +130,17 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52194
 2.) kallisto tutorial: 
 http://pachterlab.github.io/kallisto/starting
 
-3.) R 
-i) Installation: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd
+3.) R und R-Studio
+i) Installation - A Step-by-Step Guide for Beginners: https://techvidvan.com/tutorials/install-r/ und https://www.youtube.com/watch?v=TFGYlKvQEQ4
 
-ii) kurze Einfühurng in R: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd#section-just-enough-r-to-be-dangerous
+
 
 4.) Differentielle Genexpression mit R-Paket "sleuth"
 
-i) Installation von sleuth: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd#section-installing-and-loading-sleuth
-ii) sleuth ausführen: https://shiny.york.ac.uk/bioltf/gene_expression_course/day2/day2.Rmd#section-running-sleuth
-iii) Ausführliche Erklärung der interaktiven Analysemöglichkeiten von "sleuth" (siehe Punkt 4 in Anleitung): https://www.youtube.com/watch?v=KEn0CMYk6Wo
+i) https://ycl6.gitbook.io/guide-to-rna-seq-analysis/differential-expression-analysis/dge-and-dte-analysis-of-salmon-inputs-using-sleuth
+ii) Ausführliche Erklärung der interaktiven Analysemöglichkeiten von "sleuth" (siehe Punkt 4 in Anleitung): 
+https://www.youtube.com/watch?v=KEn0CMYk6Wo
+https://www.youtube.com/watch?v=80IGNmrQLTg
 
 5.) Das Konzept "liquid biopsy" erklärt von Bioinformatik-Studierenden der TH Bingen: https://www.youtube.com/watch?v=z-GnFq-8AdI
 
