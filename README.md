@@ -29,7 +29,7 @@ i) Kallisto - Programm zum Abgleich der Sequenzfragmente (reads) mit dem Refenzg
 
 ii) Humanes Genom installieren
 
-Auf https://github.com/pachterlab/kallisto-transcriptome-indices/releases die Datei „homo_sapiens.tar.gz“ herunterladen (Achtung: 1,8 GB Datei).
+Referenzgenom unter https://github.com/pachterlab/kallisto-transcriptome-indices/releases/download/ensembl-96/homo_sapiens.tar.gz herunterladen (Achtung: 1,8 GB Datei).
 Hinweis zum entdecken von „tar.gz“ Dateien unter Windows: https://praxistipps.chip.de/tar-gz-dateien-entpacken-so-gehts_36834
 
 
