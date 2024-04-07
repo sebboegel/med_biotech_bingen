@@ -1,10 +1,10 @@
 ####Beim erstmaligen Ausführen dieses Skripts, müssen folgende Zeilen einmalig ausgeführt werden. Bei jedem weiteren AUsführen des Skripts
 #####können die Punkte 1-5 auskommentiert (mit #) werden
 ##### Erstmal alle packages installieren, die wir brauchen:
-#1.) BiocManager v.3.14
+#1.) BiocManager v.3.16
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install(version = "3.14")
+BiocManager::install()
 #update all and Yes
 #2.) devtools
 install.packages("devtools")
@@ -15,7 +15,8 @@ BiocManager::install("rhdf5",force=TRUE)
 ###Da es einen Bug im Installtionsprogramm von sleuth gibt, habe ich folgendedn workaround befolgt: https://stackoverflow.com/questions/69975645/unable-to-install-package-sleuth-in-r
 devtools::install('./sleuth/')
 
-#update all and Yes
+# "1" eintippen und Enter drücken
+
 #5.) biomart um die verschiedenen Gennamen-System zu verbinden (https://en.wikipedia.org/wiki/BioMart)
 BiocManager::install("biomaRt")
 #Yes
