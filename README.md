@@ -38,7 +38,7 @@ iii) SRA-Toolkit - Programm zum Herunterladen von Sequenzierdaten aus der Sequen
 https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
 Anleitung für linux: http://www.metagenomics.wiki/tools/short-read/ncbi-sra-file-format/sra-tools-install
 
-iv) R - Programmiersprache für statistische Berechnungen und Grafiken (aktuelle R Version Stand 25. April 2023: R 4.3)
+iv) R - Programmiersprache für statistische Berechnungen und Grafiken (aktuelle R Version Stand 15. März 2026: R 4.5.3)
 https://ftp.fau.de/cran/
 
 v) R - Studio: graphical user interfave für R
@@ -101,7 +101,7 @@ sebastian@Sebastians-MBP ~ % tools/kallisto/kallisto quant -i tools/kallisto/hom
 
 4.) Differentielle Genexpression in R:
 
-Verzeichnis mit bereits berechneten Genexpressionen (Schritte 1 -3 für alle Patientenproben) herunterladen: https://1drv.ms/u/s!Ag871jY-2AMSij0b56DJVtq6H4w-?e=5iQp1n (ca. 1,4 GB)
+Verzeichnis mit bereits berechneten Genexpressionen (Schritte 1 -3 für alle Patientenproben) herunterladen: [https://1drv.ms/u/s!Ag871jY-2AMSij0b56DJVtq6H4w-?e=5iQp1n](https://1drv.ms/u/c/1203d83e36d63b0f/IQAPO9Y2PtgDIIASPQUAAAAAAat1bMxOVItK1km15rXuGSg?e=dsWAZ2) (ca. 1,4 GB)
 
 Rstudio öffnen. 
 
