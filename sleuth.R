@@ -15,7 +15,7 @@ BiocManager::install("rhdf5",force=TRUE)
 ###Da es einen Bug im Installtionsprogramm von sleuth gibt, habe ich folgendedn workaround befolgt: https://stackoverflow.com/questions/69975645/unable-to-install-package-sleuth-in-r
 devtools::install('./sleuth/')
 
-# "1" eintippen und Enter drücken
+# "1" eintippen und Enter drücken oder "Update all"
 
 #5.) biomart um die verschiedenen Gennamen-System zu verbinden (https://en.wikipedia.org/wiki/BioMart)
 BiocManager::install("biomaRt")
@@ -38,17 +38,18 @@ s2c <- dplyr::mutate(s2c, path = kal_dirs)
 
 ##################################
 #Der folgende Befehl kommuniziert mit dem Webserver von ENSEMBL um für alle menschlcihen gene u.a. die Transkript-ID
-#mit dem dazugehörenden Gensymbol herunterzuladen. Dieser Schritt braucht etwas Zeit, deshalb habe ich dies schon
-#getan und in der Datei "biomart.RDS" gespeichert. Dieses Objekt können wir ganz einfach in Zeile 50 laden und benutzen.
+#mit dem dazugehörenden Gensymbol herunterzuladen. Dieser Schritt braucht etwas Zeit.
 #lade die biomart Datenbank 
-#mart <- biomaRt::useMart(biomart = "ENSEMBL_MART_ENSEMBL",
-#                         dataset = "hsapiens_gene_ensembl",
-#                         host = 'ensembl.org')
+mart <- biomaRt::useMart(biomart = "ENSEMBL_MART_ENSEMBL",
+                         dataset = "hsapiens_gene_ensembl",
+                         host = 'ensembl.org')
+
+#Zeit für einen Kaffee
 #saveRDS(mart,file="biomart.rds")
 ###############
 #um den Transkript-Ids das dazugehörige Gensymbol zuzuordnen
 
-ttg=readRDS("biomart.rds")
+#ttg=readRDS("biomart.rds")
 t2g <- biomaRt::getBM(attributes = c("ensembl_transcript_id", "ensembl_gene_id",
                                      "external_gene_name"), mart = mart)
 t2g <- dplyr::rename(t2g, target_id = ensembl_transcript_id,
@@ -56,6 +57,7 @@ t2g <- dplyr::rename(t2g, target_id = ensembl_transcript_id,
 ###################################
 #füge alle Informationen zusammen
 so <- sleuth_prep(s2c, target_mapping = t2g,extra_bootstrap_summary = TRUE,read_bootstrap_tpm=TRUE)
+#nochmal Zeit für Kaffee
 #erstelle verschiedene Modelle zur Berechnung u.a. der differentiellen Genexpression
 so <- sleuth_fit(so, ~condition, 'full')
 so <- sleuth_fit(so, ~1, 'reduced')
